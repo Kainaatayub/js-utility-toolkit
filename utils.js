@@ -31,3 +31,13 @@ export function createCounter(start = 0) {
     value: () => count
   };
 }
+// 5. Dynamic Import (simulate lazy module loading)
+export async function loadFormatter() {
+  // In a real project: const mod = await import('./formatter.js');
+  return { format: (str) => str.trim().toUpperCase() };
+}
+ 
+// 6. String utility using rest params
+export function joinWords(separator, ...words) {
+  return words.filter(Boolean).join(separator);
+}
